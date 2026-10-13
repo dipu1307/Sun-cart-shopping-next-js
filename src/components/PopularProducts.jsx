@@ -1,10 +1,31 @@
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import ProductCard from './ProductCard';
-import products from '@/data/products';
+import ProductCard from "@/components/ProductCard";
 
-const PopularProducts = () => {
+
+async function getProducts (){
+ try{
+  const res = await fetch('http://localhost:5000/products',{
+    cache: "no-store", 
+  });
+  
+  if(!res.ok){
+    throw new Error("Failed to fetch prodcuts");
+  }
+  return await res.json();
+ }
+ catch(error){
+  console.error('Product Fetch error:', error);
+  return[];
+ }
+}
+
+export default async function PopularProducts ()  {
+  
+  const products = await getProducts();
+
+  console.log(products);
     return (
       <section className="bg-[#F8FAF9] px-6 py-16 md:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
@@ -28,14 +49,14 @@ const PopularProducts = () => {
               <ArrowRight size={18} />
             </Link>
           </div>
+          {products.length >0 ? (
           <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
-            {products.map((product)=>{
-                return <ProductCard key={product.id} product={product}/>
-            })}
-          </div>
+            {products.slice(0,4).map((product)=> (
+                 <ProductCard key={product.id} product={product}/>
+            ))}
+          </div>):(<p className='py-10 text-center text-gray-500'>Products could not be loaded. Please try agian later</p>)}
         </div>
       </section>
     );
 };
 
-export default PopularProducts;
