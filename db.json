@@ -1,0 +1,117 @@
+
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Sun Protection Sunscreen",
+      "brand": "SunCare",
+      "price": 15.99,
+      "originalPrice": 19.99,
+      "rating": 4.8,
+      "reviewCount": 134,
+      "stock": 25,
+      "category": "Skincare",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
+      "badge": "20% OFF",
+      "description": "Protect your skin from harmful UV rays with this lightweight summer sunscreen."
+    },
+    {
+      "id": "2",
+      "name": "Polarized Sunglasses",
+      "brand": "SunShade",
+      "price": 12.99,
+      "originalPrice": 16.99,
+      "rating": 4.7,
+      "reviewCount": 80,
+      "stock": 18,
+      "category": "Sunglasses",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
+      "badge": "23% OFF",
+      "description": "Stylish polarized sunglasses designed for comfortable outdoor wear."
+    },
+    {
+      "id": "3",
+      "name": "Beach Hat",
+      "brand": "SunnyWear",
+      "price": 17.99,
+      "originalPrice": 22.99,
+      "rating": 4.6,
+      "reviewCount": 76,
+      "stock": 14,
+      "category": "Hats & Caps",
+      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600",
+      "badge": "22% OFF",
+      "description": "A lightweight summer beach hat that adds style and shade to sunny days."
+    },
+    {
+      "id": "4",
+      "name": "Insulated Water Bottle",
+      "brand": "CoolVibe",
+      "price": 11.99,
+      "originalPrice": 15.99,
+      "rating": 4.8,
+      "reviewCount": 112,
+      "stock": 20,
+      "category": "Water Bottles",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600",
+      "badge": "25% OFF",
+      "description": "A reusable insulated bottle to help keep your drinks cool throughout the day."
+    },
+    {
+      "id": "5",
+      "name": "Beach Flip Flops",
+      "brand": "CozyBeach",
+      "price": 9.99,
+      "originalPrice": 12.99,
+      "rating": 4.4,
+      "reviewCount": 63,
+      "stock": 30,
+      "category": "Accessories",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600",
+      "badge": "23% OFF",
+      "description": "Comfortable casual flip flops for beach trips and everyday summer outings."
+    },
+    {
+      "id": "6",
+      "name": "Summer Tote Bag",
+      "brand": "SunnyWear",
+      "price": 14.99,
+      "originalPrice": 18.99,
+      "rating": 4.6,
+      "reviewCount": 58,
+      "stock": 16,
+      "category": "Accessories",
+      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
+      "badge": "21% OFF",
+      "description": "A spacious summer tote bag for carrying your beach and everyday essentials."
+    },
+    {
+      "id": "7",
+      "name": "Aloe Vera Gel",
+      "brand": "PureSkin",
+      "price": 13.99,
+      "originalPrice": 17.99,
+      "rating": 4.7,
+      "reviewCount": 91,
+      "stock": 22,
+      "category": "Skincare",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
+      "badge": "22% OFF",
+      "description": "A refreshing aloe vera gel for a soothing addition to your summer skincare routine."
+    },
+    {
+      "id": "8",
+      "name": "Cooling Beach Towel",
+      "brand": "CozyBeach",
+      "price": 8.99,
+      "originalPrice": 11.99,
+      "rating": 4.5,
+      "reviewCount": 47,
+      "stock": 12,
+      "category": "Accessories",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600",
+      "badge": "25% OFF",
+      "description": "A lightweight towel for beach days, poolside relaxation, and summer travel."
+    }
+  ]
+}

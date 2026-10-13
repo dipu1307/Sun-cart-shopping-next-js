@@ -1,0 +1,48 @@
+const products = [
+  {
+    id: 1,
+    name: "UV Protection Sunglasses",
+    brand: "SunShade",
+    price: 25,
+    rating: 4.8,
+    stock: 12,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
+    badge: "Best Seller",
+  },
+  {
+    id: 2,
+    name: "Summer Beach Hat",
+    brand: "SunnyWear",
+    price: 18,
+    rating: 4.6,
+    stock: 15,
+    category: "Fashion",
+    image: "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600",
+    badge: "Popular",
+  },
+  {
+    id: 3,
+    name: "Sunscreen SPF 50",
+    brand: "SunCare",
+    price: 15,
+    rating: 4.9,
+    stock: 20,
+    category: "Skincare",
+    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
+    badge: "Top Rated",
+  },
+  {
+    id: 4,
+    name: "Summer Beach Towel",
+    brand: "CozyBeach",
+    price: 22,
+    rating: 4.7,
+    stock: 10,
+    category: "Lifestyle",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600",
+    badge: "New",
+  },
+];
+
+export default products;
