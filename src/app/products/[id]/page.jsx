@@ -4,6 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
+import AddToCartButton from "@/components/AddToCartButton";
+
 const ProductDetailsPage = async({params}) => {
     const {id} = await params;
     const product = await getProductsById(id);
@@ -69,12 +71,7 @@ const ProductDetailsPage = async({params}) => {
                   : "Currently out of stock"}
               </p>
 
-              <button
-                disabled={Number(product.stock) <= 0}
-                className="mt-8 w-full rounded-xl bg-[#244D3F] px-6 py-3 font-semibold text-white transition hover:bg-[#19392E] disabled:cursor-not-allowed disabled:bg-gray-400 md:w-fit"
-              >
-                {Number(product.stock) > 0 ? "Add to Cart" : "Out of Stock"}
-              </button>
+              <AddToCartButton product={product} />
             </div>
           </div>
         </div>
