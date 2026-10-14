@@ -1,45 +1,50 @@
-import { Sparkles } from 'lucide-react';
-import React from 'react';
+
+import Marquee from "react-fast-marquee";
+import Image from "next/image";
+
 import brands from "@/data/topBrands";
 
-const TopBrands = () => {
-    return (
-      <section className="bg-white px-6 py-16 md:px-10 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#E87551]">
-              Brands You Love
-            </p>
+export default function TopBrands() {
+  return (
+    <section className="overflow-hidden bg-white py-16 md:py-20">
+      <div className="mx-auto mb-10 max-w-7xl px-6 text-center md:px-10">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#56836F]">
+          Our Partners
+        </p>
 
-            <h2 className="text-3xl font-extrabold text-[#174C3E] md:text-4xl">
-              Top Brands
-            </h2>
+        <h2 className="text-3xl font-bold text-[#244D3F] md:text-4xl">
+          Brands You Love
+        </h2>
 
-            <p className="mt-4 text-gray-600">
-              Explore brands bringing style, comfort, and freshness to your
-              summer.
-            </p>
+        <p className="mx-auto mt-4 max-w-xl text-gray-500">
+          Discover trusted brands for your summer lifestyle and everyday needs.
+        </p>
+      </div>
+
+      <Marquee
+        speed={40}
+        direction="left"
+        pauseOnHover
+        gradient
+        gradientColor="#ffffff"
+        gradientWidth={60}
+      >
+        {brands.map((brand) => (
+          <div
+            key={brand.id}
+            className="mx-5 flex h-28 w-40 items-center justify-center rounded-xl border border-gray-100 bg-white px-5 py-4 shadow-sm transition duration-300 hover:border-[#244D3F]/30 hover:shadow-md md:mx-7 md:w-48"
+          >
+            <Image
+              src={brand.logo}
+              alt={`${brand.name} logo`}
+              width={160}
+              height={80}
+              className="h-16 w-full object-contain"
+              sizes="160px"
+            />
           </div>
-
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {brands.map((brand) => (
-              <article
-                key={brand.id}
-                className="group flex min-h-36 flex-col items-center justify-center rounded-2xl border border-gray-100 bg-[#F8FAF9] p-5 text-center transition duration-300 hover:-translate-y-1 hover:border-[#174C3E]/20 hover:bg-[#E5F1EB] hover:shadow-md"
-              >
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#174C3E] shadow-sm transition group-hover:bg-[#174C3E] group-hover:text-white">
-                  <Sparkles size={23} />
-                </div>
-
-                <h3 className="font-bold text-[#174C3E]">{brand.name}</h3>
-
-                <p className="mt-1 text-xs text-gray-500">{brand.category}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-};
-
-export default TopBrands;
+        ))}
+      </Marquee>
+    </section>
+  );
+}

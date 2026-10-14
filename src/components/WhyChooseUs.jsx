@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
               The SunCart Difference
             </p>
             <h2 className="text-3xl font-extrabold text-[#174C3E] md:text-4xl">
-              Why Choose SucCart?
+              Why Choose SunCart?
             </h2>
             <p className="mt-4 text-gray-600">
               Everything you need for a happier, cooler, and more enjoyable
