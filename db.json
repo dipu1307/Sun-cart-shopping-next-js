@@ -1,5 +1,31 @@
-
 {
+"categories": [
+{
+"id": "1",
+"name": "Skincare"
+},
+{
+"id": "2",
+"name": "Sunglasses"
+},
+{
+"id": "3",
+"name": "Hats & Caps"
+},
+{
+"id": "4",
+"name": "Water Bottles"
+},
+{
+"id": "5",
+"name": "Accessories"
+},
+{
+"id": "6",
+"name": "Summer Clothing"
+}
+],
+
   "products": [
     {
       "id": "1",
@@ -10,7 +36,7 @@
       "rating": 4.8,
       "reviewCount": 134,
       "stock": 25,
-      "category": "Skincare",
+      "category": "Skincare", 
       "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
       "badge": "20% OFF",
       "description": "Protect your skin from harmful UV rays with this lightweight summer sunscreen."
@@ -24,7 +50,7 @@
       "rating": 4.7,
       "reviewCount": 80,
       "stock": 18,
-      "category": "Sunglasses",
+      "category": "Sunglasses", 
       "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
       "badge": "23% OFF",
       "description": "Stylish polarized sunglasses designed for comfortable outdoor wear."
@@ -38,7 +64,7 @@
       "rating": 4.6,
       "reviewCount": 76,
       "stock": 14,
-      "category": "Hats & Caps",
+      "category": "Hats & Caps", 
       "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600",
       "badge": "22% OFF",
       "description": "A lightweight summer beach hat that adds style and shade to sunny days."
@@ -52,7 +78,7 @@
       "rating": 4.8,
       "reviewCount": 112,
       "stock": 20,
-      "category": "Water Bottles",
+      "category": "Water Bottles", 
       "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600",
       "badge": "25% OFF",
       "description": "A reusable insulated bottle to help keep your drinks cool throughout the day."
@@ -66,7 +92,7 @@
       "rating": 4.4,
       "reviewCount": 63,
       "stock": 30,
-      "category": "Accessories",
+      "category": "Accessories", 
       "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600",
       "badge": "23% OFF",
       "description": "Comfortable casual flip flops for beach trips and everyday summer outings."
@@ -80,7 +106,7 @@
       "rating": 4.6,
       "reviewCount": 58,
       "stock": 16,
-      "category": "Accessories",
+      "category": "Accessories", 
       "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600",
       "badge": "21% OFF",
       "description": "A spacious summer tote bag for carrying your beach and everyday essentials."
@@ -94,7 +120,7 @@
       "rating": 4.7,
       "reviewCount": 91,
       "stock": 22,
-      "category": "Skincare",
+      "category": "Skincare", 
       "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
       "badge": "22% OFF",
       "description": "A refreshing aloe vera gel for a soothing addition to your summer skincare routine."
@@ -108,10 +134,237 @@
       "rating": 4.5,
       "reviewCount": 47,
       "stock": 12,
-      "category": "Accessories",
+      "category": "Accessories", 
       "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600",
       "badge": "25% OFF",
       "description": "A lightweight towel for beach days, poolside relaxation, and summer travel."
+    },
+    {
+      "id": "9",
+      "name": "Daily Sunscreen SPF 50",
+      "brand": "SunCare",
+      "price": 18,
+      "originalPrice": 24,
+      "rating": 4.9,
+      "reviewCount": 210,
+      "stock": 30,
+      "category": "Skincare", 
+      "image": "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=600",
+      "badge": "Popular",
+      "description": "Lightweight sunscreen for daily outdoor protection."
+    },
+    {
+      "id": "10",
+      "name": "Vitamin C Face Serum",
+      "brand": "GlowLab",
+      "price": 22,
+      "originalPrice": 28,
+      "rating": 4.7,
+      "reviewCount": 96,
+      "stock": 18,
+      "category": "Skincare", 
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600",
+      "badge": "New",
+      "description": "A brightening serum for a fresh-looking complexion."
+    },
+    {
+      "id": "11",
+      "name": "Classic UV Sunglasses",
+      "brand": "Sunmate",
+      "price": 25,
+      "originalPrice": 35,
+      "rating": 4.8,
+      "reviewCount": 145,
+      "stock": 20,
+      "category": "Sunglasses", 
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
+      "badge": "Bestseller",
+      "description": "Classic sunglasses for sunny days and outdoor adventures."
+    },
+    {
+      "id": "12",
+      "name": "Retro Round Sunglasses",
+      "brand": "CoolVibe",
+      "price": 20,
+      "originalPrice": 27,
+      "rating": 4.5,
+      "reviewCount": 76,
+      "stock": 16,
+      "category": "Sunglasses",
+      "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600",
+      "badge": "Trending",
+      "description": "Retro-inspired round frames for a stylish summer look."
+    },
+    {
+      "id": "13",
+      "name": "Sport UV Sunglasses",
+      "brand": "ActiveSun",
+      "price": 30,
+      "originalPrice": 39,
+      "rating": 4.7,
+      "reviewCount": 64,
+      "stock": 14,
+      "category": "Sunglasses",
+      "image": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600",
+      "badge": "New",
+      "description": "Lightweight sunglasses for outdoor activities."
+    },
+    {
+      "id": "14",
+      "name": "Classic Cotton Baseball Cap",
+      "brand": "SunnyWear",
+      "price": 14,
+      "originalPrice": 18,
+      "rating": 4.6,
+      "reviewCount": 58,
+      "stock": 24,
+      "category": "Hats & Caps", 
+      "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600",
+      "badge": "Popular",
+      "description": "A comfortable cotton cap for everyday outdoor wear."
+    },
+    {
+      "id": "15",
+      "name": "Wide Brim Sun Hat",
+      "brand": "BeachBreeze",
+      "price": 22,
+      "originalPrice": 29,
+      "rating": 4.8,
+      "reviewCount": 103,
+      "stock": 17,
+      "category": "Hats & Caps",
+      "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600",
+      "badge": "Bestseller",
+      "description": "A wide-brim hat for relaxed beach days."
+    },
+    {
+      "id": "16",
+      "name": "Sporty Adjustable Cap",
+      "brand": "ActiveSun",
+      "price": 16,
+      "originalPrice": 21,
+      "rating": 4.7,
+      "reviewCount": 72,
+      "stock": 28,
+      "category": "Hats & Caps",
+      "image": "https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?w=600",
+      "badge": "Sale",
+      "description": "An adjustable cap designed for casual outdoor activities."
+    },
+    {
+      "id": "17",
+      "name": "Reusable Water Bottle",
+      "brand": "AquaFresh",
+      "price": 19,
+      "originalPrice": 25,
+      "rating": 4.9,
+      "reviewCount": 188,
+      "stock": 32,
+      "category": "Water Bottles", 
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600",
+      "badge": "Bestseller",
+      "description": "A reusable bottle for staying hydrated on the go."
+    },
+    
+    {
+      "id": "18",
+      "name": "Transparent Sports Bottle",
+      "brand": "AquaFresh",
+      "price": 13,
+      "originalPrice": 17,
+      "rating": 4.5,
+      "reviewCount": 61,
+      "stock": 26,
+      "category": "Water Bottles", 
+      "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600",
+      "badge": "New",
+      "description": "A simple lightweight bottle for workouts and travel."
+    },
+    {
+      "id": "19",
+      "name": "Compact Travel Flask",
+      "brand": "HydroLife",
+      "price": 24,
+      "originalPrice": 31,
+      "rating": 4.7,
+      "reviewCount": 88,
+      "stock": 12,
+      "category": "Water Bottles",
+      "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600",
+      "badge": "Sale",
+      "description": "A compact flask that fits easily into a travel bag."
+    },
+    {
+      "id": "20",
+      "name": "Minimalist Wrist Watch",
+      "brand": "TimeCraft",
+      "price": 35,
+      "originalPrice": 45,
+      "rating": 4.6,
+      "reviewCount": 57,
+      "stock": 10,
+      "category": "Accessories",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600",
+      "badge": "New",
+      "description": "A minimalist watch for everyday style."
+    },
+    {
+      "id": "21",
+      "name": "Classic Summer T-Shirt",
+      "brand": "SunnyWear",
+      "price": 18,
+      "originalPrice": 24,
+      "rating": 4.7,
+      "reviewCount": 86,
+      "stock": 27,
+      "category": "Summer Clothing",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600",
+      "badge": "Popular",
+      "description": "A casual T-shirt for comfortable everyday summer wear."
+    },
+    
+       {
+      "id": "22",
+      "name": "Lightweight Linen Shirt",
+      "brand": "CozyBeach",
+      "price": 32,
+      "originalPrice": 40,
+      "rating": 4.8,
+      "reviewCount": 74,
+      "stock": 16,
+      "category": "Summer Clothing", 
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600",
+      "badge": "New",
+      "description": "A lightweight shirt for warm days and casual outings."
+    },
+    {
+      "id": "23",
+      "name": "Relaxed Summer Shorts",
+      "brand": "CoolVibe",
+      "price": 23,
+      "originalPrice": 30,
+      "rating": 4.5,
+      "reviewCount": 53,
+      "stock": 20,
+      "category": "Summer Clothing",
+      "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600",
+      "badge": "Sale",
+      "description": "Relaxed-fit shorts for comfortable summer adventures."
+    },
+    {
+      "id": "24",
+      "name": "Casual Summer Dress",
+      "brand": "BeachBreeze",
+      "price": 34,
+      "originalPrice": 42,
+      "rating": 4.9,
+      "reviewCount": 101,
+      "stock": 13,
+      "category": "Summer Clothing",
+      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600",
+      "badge": "Bestseller",
+      "description": "A breezy casual dress for warm-weather occasions."
     }
+    
   ]
 }

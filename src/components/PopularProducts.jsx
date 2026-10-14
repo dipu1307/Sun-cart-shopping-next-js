@@ -2,24 +2,10 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import ProductCard from "@/components/ProductCard";
+import { getProducts } from '@/lib/data';
 
 
-async function getProducts (){
- try{
-  const res = await fetch('http://localhost:5000/products',{
-    cache: "no-store", 
-  });
-  
-  if(!res.ok){
-    throw new Error("Failed to fetch prodcuts");
-  }
-  return await res.json();
- }
- catch(error){
-  console.error('Product Fetch error:', error);
-  return[];
- }
-}
+
 
 export default async function PopularProducts ()  {
   

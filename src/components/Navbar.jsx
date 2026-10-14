@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import {Button} from "@heroui/react";
 import { Search, ShoppingCart, UserRound, Sun } from "lucide-react";
+import NavLink from './NavLink';
 
 
 const Navbar = () => {
+ 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isAccountOpen, setIsAccountOpen] = useState(false);
@@ -54,16 +56,16 @@ const Navbar = () => {
             </div>
             <ul className="hidden items-center gap-8 md:flex">
               <li>
-                <Link href="/">Home</Link>
+                <NavLink href="/">Home</NavLink>
               </li>
               <li>
-                <Link href="/products">Products</Link>
+                <NavLink href="/products">Products</NavLink>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <NavLink href="/about">About</NavLink>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <NavLink href="/contact">Contact</NavLink>
               </li>
             </ul>
             <div className="hidden items-center gap-6 md:flex">
