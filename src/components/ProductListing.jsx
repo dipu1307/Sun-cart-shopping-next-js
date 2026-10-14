@@ -3,6 +3,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 
 
@@ -94,6 +95,12 @@ const ProductListing = ({products=[],categories=[]}) => {
                         ${Number(product.originalPrice).toFixed(2)}
                       </p>
                     )}
+                    <Link
+                      href={`/products/${product.id}`}
+                      className="mt-4 block w-full rounded-lg bg-[#244D3F] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#19392E]"
+                    >
+                      View Details
+                    </Link>
                   </div>
                 </article>
               ))}
