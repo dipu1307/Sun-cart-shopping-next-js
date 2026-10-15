@@ -51,7 +51,6 @@ const LoginPage = () => {
               <FieldError>{errors.email?.message}</FieldError>
             </TextField>
           </div>
-
           <div>
             <TextField
               name="password"
@@ -92,12 +91,10 @@ const LoginPage = () => {
 
           <Button
             type="submit"
-            isLoading={isSubmitting}
-            className="w-full bg-[#244D3F] font-semibold text-white"
-            radius="lg"
-            size="lg"
+            isDisabled={isSubmitting}
+            className="w-full rounded-lg bg-[#244D3F] py-3 font-semibold text-white"
           >
-            Login
+            {isSubmitting ? "Please wait..." : "Login"}
           </Button>
         </form>
 

@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import { Eye, EyeOff } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { authClient } from "@/lib/auth-client";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,9 +23,26 @@ const RegisterPage = () => {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Register data:", data);
+  const onSubmit =async (formData) => {
+    console.log("Register data:", formData);
+
+    const {data,error}= await authClient.signUp.email({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      image: formData.photoURL,
+
+    });
+    if(error){
+      console.log('Sign Up Error',error);
+    }
+    else{
+      console.log("SignUp Successful", data);
+    }
+
+    
   };
+  
 
   return (
     <main className="flex min-h-[70vh] items-center justify-center bg-[#f7f9f8] px-4 py-12">
@@ -33,9 +51,7 @@ const RegisterPage = () => {
           <h1 className="mb-2 text-3xl font-bold text-[#244D3F]">
             Create Account
           </h1>
-          <p className="text-gray-500">
-            Join SunCart for a refreshing summer!
-          </p>
+          <p className="text-gray-500">Join SunCart for a refreshing summer!</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
@@ -93,7 +109,8 @@ const RegisterPage = () => {
                 required: "Photo URL is required",
                 pattern: {
                   value: /^https?:\/\/.+/i,
-                  message: "Enter a valid URL starting with http:// or https://",
+                  message:
+                    "Enter a valid URL starting with http:// or https://",
                 },
               })}
               placeholder="https://example.com/photo.jpg"
@@ -143,10 +160,10 @@ const RegisterPage = () => {
 
           <Button
             type="submit"
-            isLoading={isSubmitting}
+            isDisabled={isSubmitting}
             className="w-full rounded-lg bg-[#244D3F] py-3 font-semibold text-white"
           >
-            Create Account
+            {isSubmitting ? "Please wait..." : "Create Account"}
           </Button>
         </form>
 
