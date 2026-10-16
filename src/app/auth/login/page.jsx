@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button, Input, TextField, Label, FieldError } from "@heroui/react";
 import { Eye, EyeOff } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { authClient } from "@/lib/auth-client";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,8 +16,19 @@ const LoginPage = () => {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Login data:", data);
+  const onSubmit =async (formData) => {
+    console.log("Login data:", formData);
+    const {data, error} = await authClient.signIn.email({
+      email: formData.email,
+      password: formData.password,
+      callbackURL:"/"
+    })
+    if(error){
+      console.log('SignIn data not match', error);
+    }
+    else{
+      console.log("SignIn data match", data);
+    }
   };
 
   return (

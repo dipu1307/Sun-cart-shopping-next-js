@@ -13,9 +13,12 @@ import {
 import { Eye, EyeOff } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
   const {
     register,
@@ -25,22 +28,24 @@ const RegisterPage = () => {
 
   const onSubmit =async (formData) => {
     console.log("Register data:", formData);
-
+      
     const {data,error}= await authClient.signUp.email({
       name: formData.name,
       email: formData.email,
       password: formData.password,
       image: formData.photoURL,
+      callbackURL: "/auth/login",
 
     });
+    
     if(error){
       console.log('Sign Up Error',error);
     }
     else{
       console.log("SignUp Successful", data);
     }
-
     
+    router.push("/auth/login");
   };
   
 
