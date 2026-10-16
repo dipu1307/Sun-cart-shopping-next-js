@@ -5,11 +5,28 @@ import Link from "next/link";
 import {Button} from "@heroui/react";
 import { Search, ShoppingCart, UserRound, Sun } from "lucide-react";
 import NavLink from './NavLink';
+import { useSession,signOut } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 
 
 const Navbar = () => {
  
+    const {data: session, isPending} = useSession();
 
+    console.log('session check', session)
+    console.log("loding",isPending);
+    const router = useRouter();
+    const handleSignOut = async ()=>{
+      try{
+        await signOut();
+        setIsAccountOpen(false);
+        router.push("/");
+        router.refresh();
+      }
+      catch(error){
+        console.error("Sign out Failed", error);
+      }
+    }
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isAccountOpen, setIsAccountOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen]  = useState(false);
@@ -124,21 +141,37 @@ const Navbar = () => {
 
                 {isAccountOpen && (
                   <div className="absolute right-0 top-full z-50 mt-2 w-40 rounded-xl border border-gray-200 bg-white p-2 shadow-lg">
-                    <Link
-                      href="/auth/login"
-                      onClick={() => setIsAccountOpen(false)}
-                      className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-100"
-                    >
-                      Login
-                    </Link>
+                    {isPending ? (
+                      <p className="px-3 py-2 text-sm text-gray-500">
+                        Loading...
+                      </p>
+                    ) : session ? (
+                      <button
+                        type="button"
+                        onClick={handleSignOut}
+                        className="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-gray-100"
+                      >
+                        Sign Out
+                      </button>
+                    ) : (
+                      <>
+                        <Link
+                          href="/auth/login"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-100"
+                        >
+                          Login
+                        </Link>
 
-                    <Link
-                      href="/auth/register"
-                      onClick={() => setIsAccountOpen(false)}
-                      className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-100"
-                    >
-                      Register
-                    </Link>
+                        <Link
+                          href="/auth/register"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="block rounded-lg px-3 py-2 text-sm hover:bg-gray-100"
+                        >
+                          Register
+                        </Link>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
@@ -238,21 +271,34 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li className="mt-4 flex flex-col gap-2 border-t border-separator pt-4">
-                  <Link
-                    href="/auth/login"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block py-2"
-                  >
-                    Login
-                  </Link>
-                  <Button
-                    as={Link}
-                    href="/auth/register"
-                    onPress={() => setIsMenuOpen(false)}
-                    className="w-full bg-teal-800 text-white"
-                  >
-                    Register
-                  </Button>
+                  {isPending ? (
+                    <p className="py-2 text-sm text-gray-500">Loding.....</p>
+                  ) : session ? (
+                    <Button
+                      onPress={handleSignOut}
+                      className="w-full bg-acent-600 text-white"
+                    >
+                      Sign Out
+                    </Button>
+                  ) : (
+                    <>
+                      <Link
+                        href="/auth/login"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block py-2"
+                      >
+                        Login
+                      </Link>
+                      <Button
+                        as={Link}
+                        href="/auth/register"
+                        onPress={() => setIsMenuOpen(false)}
+                        className="w-full bg-teal-800 text-white"
+                      >
+                        Register
+                      </Button>
+                    </>
+                  )}
                 </li>
               </ul>
             </div>
